@@ -1,0 +1,5 @@
+boss_customer:
+    resource: "@BossCustomerBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

@@ -1,0 +1,89 @@
+{% extends "BossCustomerBundle::account.html.twig" %}
+{% block bundle %}
+<h3>Créer votre entreprise</h3>
+
+<div class="well">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+  {# Les erreurs générales du formulaire. #}
+    {{ form_errors(form) }}
+    <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.activity_description, "Description de l’activité", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.activity_description) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.activity_description, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+      
+    <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.main_activity, "Parmis les activités exercés, indiquez la plus importante", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.main_activity) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.main_activity, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+      
+    <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.isCraft, "Est-ce une activité artisanale ?", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.isCraft) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.isCraft, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+      
+    <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.nature, "Nature de l’activité", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.nature) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.nature, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+    
+    <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.place, "Lieu de l’exercice", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.place) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.place, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            {{ form_widget(form.save, {'attr': {'class': 'btn btn-success'}}) }}
+        </div>
+    </div>
+        
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            {{ form_widget(form.save, {'attr': {'class': 'btn btn-success'}}) }}
+        </div>
+    </div>
+        
+    
+      {{ form_end(form) }}
+</div>
+{% endblock %}

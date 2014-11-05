@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        {% endblock %}
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('bootstrap-theme.css') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body>
+        <div class="masterhead">
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="container">
+                    <a href="/create"><button type="button" class="btn btn-default navbar-btn navbar-right btn-success"><span class="glyphicon glyphicon-user"></span> Create Account</button></a>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+    
+{% block javascripts %}{% endblock %}
+</body>
+</html>

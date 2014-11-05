@@ -1,0 +1,49 @@
+{% extends "::boss.html.twig" %}
+{% block body %}
+    <div class="jumbotron">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile">File input</label>
+                        <input type="file" id="exampleInputFile">
+                        <p class="help-block">Example block-level help text here.</p>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Check me out
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    Créer son entreprise gratuitement*
+                    Vos Statuts et tous les documents obligatoires sont générés sur-mesure pour créer une SARL, EURL, SAS, SASU, SCI & EIRL.
+                    Vous imprimez, vous signez... votre entreprise est créée.</div>
+                <div class="col-lg-4">
+                    Pour une SARL par exemple, votre dossier contiendra tous ces documents générés sur-mesure :
+                    <ul>
+                        <li>Notice explicative</li>
+                        <li>Projet de statuts pour dépôt de capital en banque</li>
+                        <li>Statuts définitifs</li>
+                        <li>Assemblées de nomination de la gérance</li>
+                        <li>Déclaration de non condamnation</li>
+                        <li>Formulaire Cerfa M0</li>
+                        <li>Formulaire Cerfa TNS (si besoin)</li>
+                        <li>Etat des actes</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    Créez votre entreprise en 10 minutes*
+                    et économisez 2.500 € maintenant
+                </div>
+            </div>
+{% endblock %}

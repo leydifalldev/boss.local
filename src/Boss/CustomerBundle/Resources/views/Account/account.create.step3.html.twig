@@ -1,0 +1,68 @@
+{% extends "BossCustomerBundle::account.html.twig" %}
+{% block bundle %}
+<h3>Capital de l’entreprise</h3>
+
+<div class="well">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+  {# Les erreurs générales du formulaire. #}
+    {{ form_errors(form) }}
+    <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.capital_type, "Type de capital", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.capital_type) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.capital_type, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+      
+    <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.capital_amount, "Montant du capital ?", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.capital_amount) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.capital_amount, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+      
+    <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.capital_discharge, "% libératoire du capital", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.capital_discharge) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.capital_discharge, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+      
+    <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.capital_bank_amount, "Montant à dépôser en banque", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.capital_bank_amount) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.capital_bank_amount, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            {{ form_widget(form.save, {'attr': {'class': 'btn btn-success'}}) }}
+        </div>
+    </div>
+      {{ form_end(form) }}
+</div>
+{% endblock %}
